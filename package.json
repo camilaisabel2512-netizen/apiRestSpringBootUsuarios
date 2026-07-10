@@ -1,0 +1,21 @@
+{
+  "name": "api-usuarios",
+  "version": "1.0.0",
+  "description": "API RESTful de usuarios con Node.js, Express, MySQL y JWT",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js"
+  },
+  "dependencies": {
+    "bcrypt": "^6.0.0",
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1",
+    "jsonwebtoken": "^9.0.3",
+    "mysql2": "^3.22.5",
+    "sequelize": "^6.37.8"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.14"
+  }
+}
