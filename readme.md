@@ -1,52 +1,75 @@
-## Spring Boot Api example
+# API REST de Usuarios
 
-Tutorial para crear una API de Spring boot.
+## Descripción
 
-Ver los vídeos para entender la construcción:
+Este proyecto consiste en una API REST desarrollada con **Node.js**, **Express**, **Sequelize** y **MySQL**. Permite registrar usuarios, iniciar sesión mediante autenticación con JWT y realizar operaciones CRUD protegidas.
 
-Fundamentos
-https://www.youtube.com/watch?v=WVHnk04skPc&t
+## Tecnologías utilizadas
 
-Rest  API 
-https://www.youtube.com/watch?v=vTu2HQrXtyw
+* Node.js
+* Express
+* Sequelize
+* MySQL
+* JWT (JSON Web Token)
+* bcrypt
+* dotenv
 
-* Se actualizo el tipo de empaquetado a .jar
+## Instalación
 
-Rest Full Api para crear usuarios y modelos. 
- 
-* Get All the user
-* Post a new user
-* Update users
-* Delete a user by id 
-* Find user by properties 
+1. Clonar el repositorio.
+2. Instalar las dependencias:
 
-### Iniciar la aplicación 
-Asegurarse de tener
-Java 11 + 
+```bash
+npm install
+```
 
-### Agregar la configuración de la base en applicacitons.properties 
-This step is necessary
+3. Crear un archivo `.env` con las credenciales de la base de datos:
 
-/src/main/resources/application.properties
+```
+DB_HOST=
+DB_PORT=
+DB_NAME=
+DB_USER=
+DB_PASSWORD=
+JWT_SECRET=
+```
 
-Actualiza las siguientes propiedades 
+4. Ejecutar la aplicación:
 
-* url 
-* username 
-* password
+```bash
+npm run dev
+```
 
-#### Ejecutalo
-usar mvn para ejecutar
+La API se ejecutará en:
 
-Windows example:
+```
+http://localhost:3000
+```
 
-    mvnw.cmd spring-boot:run
+## Endpoints
 
-Unix based:
+### Autenticación
 
-    mvwn spring-boot:run 
+* **POST** `/api/auth/register` → Registrar un usuario.
+* **POST** `/api/auth/login` → Iniciar sesión y obtener un token JWT.
 
-Entrar a localhost:8080
+### Usuarios (requieren autenticación)
+
+* **GET** `/api/users/profile` → Obtener el perfil del usuario autenticado.
+* **PUT** `/api/users/profile` → Actualizar los datos del usuario.
+* **DELETE** `/api/users/profile` → Eliminar el usuario autenticado.
+
+## Autor
+
+Camila Ruiz
+
+
+
+
+
+
+
+
 
 
 
