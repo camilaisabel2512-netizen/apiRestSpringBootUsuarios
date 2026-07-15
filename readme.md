@@ -1,78 +1,37 @@
-# API REST de Usuarios
+API REST de Usuarios
+Descripción
 
-## Descripción
+Este proyecto fue realizado como trabajo final del módulo de Backend. Se desarrolló una API REST para la gestión de usuarios utilizando Node.js, Express, Sequelize y MySQL. Además, se implementó autenticación mediante JWT y encriptación de contraseñas con bcrypt.
 
-Este proyecto consiste en una API REST desarrollada con **Node.js**, **Express**, **Sequelize** y **MySQL**. Permite registrar usuarios, iniciar sesión mediante autenticación con JWT y realizar operaciones CRUD protegidas.
-
-## Tecnologías utilizadas
-
-* Node.js
-* Express
-* Sequelize
-* MySQL
-* JWT (JSON Web Token)
-* bcrypt
-* dotenv
-
-## Instalación
-
-1. Clonar el repositorio.
-2. Instalar las dependencias:
-
-```bash
+Tecnologías utilizadas
+Node.js
+Express
+Sequelize
+MySQL
+JWT
+bcrypt
+dotenv
+Funcionalidades
+Registrar usuarios.
+Iniciar sesión.
+Generar token JWT.
+Consultar el perfil del usuario autenticado.
+Actualizar datos del usuario.
+Eliminar usuarios.
+Instalación
 npm install
-```
+npm run dev
+Variables de entorno
 
-3. Crear un archivo `.env` con las credenciales de la base de datos:
+Crear un archivo .env con:
 
-```
 DB_HOST=
 DB_PORT=
 DB_NAME=
 DB_USER=
 DB_PASSWORD=
 JWT_SECRET=
-```
-
-4. Ejecutar la aplicación:
-
-```bash
-npm run dev
-```
-
-La API se ejecutará en:
-
-```
-http://localhost:3000
-```
-
-## Endpoints
-
-### Autenticación
-
-* **POST** `/api/auth/register` → Registrar un usuario.
-* **POST** `/api/auth/login` → Iniciar sesión y obtener un token JWT.
-
-### Usuarios (requieren autenticación)
-
-* **GET** `/api/users/profile` → Obtener el perfil del usuario autenticado.
-* **PUT** `/api/users/profile` → Actualizar los datos del usuario.
-* **DELETE** `/api/users/profile` → Eliminar el usuario autenticado.
-
-## Autor
 
 Camila Ruiz
-
-
-
-
-
-
-
-
-
-
-
-
 
 
